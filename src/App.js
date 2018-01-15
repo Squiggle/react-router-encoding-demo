@@ -31,7 +31,7 @@ class App extends Component {
       <BrowserRouter>
         <div className="App">
           <header className="App-header">
-              { pages.map(p => <span><Link to={`/pages/${p.title}`}>{p.title}</Link></span> )}
+              { pages.map(p => <span><Link to={`${process.env.PUBLIC_URL}/pages/${p.title}`}>{p.title}</Link></span> )}
           </header>
           <p className="App-intro">
             <Route path="/pages/:title" component={withRouter(Page)} />
